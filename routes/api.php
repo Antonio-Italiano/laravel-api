@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Api\ProjectController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,9 +15,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
+Route::get('/test', function() {
+    $names = ['pino', 'robert', 'pino', 'robert'];
+    return response()->json($names);
 });
+
+
 
 // Preparo la rotta per ricevere una lista dei progetti
 Route::get('/projects', [ProjectController::class, 'index']);
