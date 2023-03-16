@@ -15,15 +15,14 @@ use App\Http\Controllers\Api\ProjectController;
 |
 */
 
-Route::get('/test', function() {
-    $names = ['pino', 'robert', 'pino', 'robert'];
-    return response()->json($names);
-});
 
 
 
 // Preparo la rotta per ricevere una lista dei progetti
 Route::get('/projects', [ProjectController::class, 'index']);
+
+//rotta per il dettaglio del singolo progetto
+Route::get('/projects/{project}', [ProjectController::class, 'show']);
 
 // per ricevere tutte le rotte che servono per Api
 // Route::apiResource('projects', ProjectController::class);
