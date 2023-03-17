@@ -4,6 +4,8 @@ const placeholder = 'https://marcolanci.it/utils/placeholder.jpg';
 //PRENDO ELEMENTI DAL DOM
 const imageInput = document.getElementById('image');
 const imagePreview = document.getElementById('image-preview');
+// console.log(imageInput);
+// debugger;
 
 //EVENTO AL CAMBIO DEL CARICAMENTO DEL FILE
 imageInput.addEventListener('change', () => {
@@ -20,4 +22,7 @@ imageInput.addEventListener('change', () => {
 
     } else imagePreview.src = placeholder;
 
+});
+document.addEventListener("DOMContentLoaded", function (event) {
+    // Your code to run since DOM is loaded and ready
 });

@@ -151,3 +151,9 @@
   </div>
   
 </form>
+
+@section('scripts')
+@vite(['resources/js/projects/preview-img.js'])
+@vite(['resources/js/projects/preview-slug.js'])
+    
+@endsection
